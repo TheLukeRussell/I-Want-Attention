@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Button, Text } from 'react-native-elements';
+import { StyleSheet, View, ActivityIndicator } from 'react-native';
+import { Button, Text, Image } from 'react-native-elements';
 import Spacer from './Spacer';
 import SendSMS from 'react-native-sms';
 import { preventAutoHide } from 'expo/build/launch/SplashScreen';
@@ -10,6 +10,7 @@ export default function App() {
   const [outputText, setOutputText] = useState(' ');
   return (
     <View style={styles.container}>
+      <Image source={require('./fix.png')} style={{ width: 200, height: 200 }} />
       {/* <Text style={styles.text}>{outputText}</Text> */}
       {/* <Spacer /> */}
       <Button
@@ -45,5 +46,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     marginTop: 15,
+  },
+  image: {
+    marginBottom: 30,
   },
 });
