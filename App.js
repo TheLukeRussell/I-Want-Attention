@@ -13,7 +13,11 @@ export default function App() {
         buttonStyle={{
           backgroundColor: '#3f4441',
           width: '100%',
-          height: '50%',
+          alignItems: 'center',
+        }}
+        titleStyle={{
+          color: 'white',
+          fontSize: 36,
         }}
         title='I want Attention'
         onPress={() => setOutputText('Luke has been notified!')}
@@ -37,6 +41,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#fff',
-    paddingVertical: 10,
+    fontSize: 18,
+    marginBottom: 30,
   },
 });
