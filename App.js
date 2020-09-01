@@ -2,12 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native-elements';
+import Spacer from './Spacer';
 import { preventAutoHide } from 'expo/build/launch/SplashScreen';
 
 export default function App() {
-  const [outputText, setOutputText] = useState('Click the button if you want attention');
+  const [outputText, setOutputText] = useState('');
   return (
     <View style={styles.container}>
+      <Spacer />
       <Text style={styles.text}>{outputText}</Text>
       <Button
         buttonStyle={{
@@ -36,8 +38,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#5e6f64',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   text: {
     color: '#fff',
